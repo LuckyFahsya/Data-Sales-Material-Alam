@@ -2,8 +2,9 @@
 
 Dashboard interaktif untuk memantau kinerja penjualan material alam (pasir, kerikil, batu kali) — dibangun di Excel dengan PivotTable, PivotChart, dan slicer, mencakup pembersihan data dan koreksi bug sebelum insight final diambil.
 
-![Preview Dashboard](assets/dashboard_preview.png)
-> ⚠️ Gambar di atas hasil render otomatis dan belum sepenuhnya rapi (judul terpotong, 1 chart belum tampil, slicer tidak ikut ter-render). Ganti dengan screenshot langsung dari Excel sebelum publish — hasilnya akan jauh lebih rapi karena semua elemen (termasuk slicer) tampil normal di Excel.
+![Preview Dashboard](<img width="1361" height="663" alt="Dashboard_View" src="https://github.com/user-attachments/assets/139e8616-85fe-4893-ba60-b639376b110d" />
+)
+
 
 ---
 
@@ -60,7 +61,8 @@ Chart ini awalnya ikut memasukkan baris "Grand Total" pivot sebagai salah satu s
     └── dashboard_preview.png
 ```
 
-📊 **[Buka dashboard interaktif (Excel)](Dashboard_Sales_Material_Alam.xlsx)**
+📊 **[Buka dashboard interaktif (Excel)]([Porto_DashBoard_Excel_Fixed.xlsx](https://github.com/user-attachments/files/32632308/Porto_DashBoard_Excel_Fixed.xlsx)
+)**
 
 ---
 

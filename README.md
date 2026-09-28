@@ -4,7 +4,8 @@ Dashboard penjualan interaktif di Microsoft Excel (PivotTable, PivotChart, slice
 
 > **Catatan:** ini adalah proyek latihan. Dataset dan desain dashboard mengikuti tutorial YouTube; saya membangunnya ulang sendiri untuk mempraktikkan PivotTable, PivotChart, dan slicer di Excel.
 
-<img width="1361" height="663" alt="Dashboard_View" src="https://github.com/user-attachments/assets/626a9d3c-354b-4608-8f5e-17ab680a07cb" />
+<img width="1423" height="707" alt="image" src="https://github.com/user-attachments/assets/8bcd91f6-e429-4579-b9c8-9d8c77108585" />
+
 
 
 ---
@@ -35,7 +36,8 @@ Data transaksi penjualan material alam periode Januari–Juli 2025 dengan kolom:
 └── Dashboard_Sales_Material_Alam.xlsx   # buka sheet "Dashboard"
 ```
 
-📊 **[Buka dashboard (Excel)](Dashboard_Sales_Material_Alam.xlsx)** — coba klik slicer untuk melihat angka dan chart berubah.
+📊 **[Buka dashboard (Excel)]([Porto DashBoard Excel.xlsx](https://github.com/user-attachments/files/32752888/Porto.DashBoard.Excel.xlsx)
+)** — coba klik slicer untuk melihat angka dan chart berubah.
 
 ---
 

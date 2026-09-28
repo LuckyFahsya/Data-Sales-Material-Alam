@@ -1,75 +1,41 @@
 # 📈 Dashboard Sales Material Alam
 
-Dashboard interaktif untuk memantau kinerja penjualan material alam (pasir, kerikil, batu kali) — dibangun di Excel dengan PivotTable, PivotChart, dan slicer, mencakup pembersihan data dan koreksi bug sebelum insight final diambil.
+Dashboard penjualan interaktif di Microsoft Excel (PivotTable, PivotChart, slicer, dan timeline) untuk memantau pembelian, penjualan, dan laba material alam.
 
-![Preview Dashboard]<img width="1467" height="716" alt="Screenshot 2026-09-25 065218" src="https://github.com/user-attachments/assets/b6792c56-97e3-45aa-b765-7b6f1bef4569" />
+> **Catatan:** ini adalah proyek latihan. Dataset dan desain dashboard mengikuti tutorial YouTube; saya membangunnya ulang sendiri untuk mempraktikkan PivotTable, PivotChart, dan slicer di Excel.
 
+<img width="1361" height="663" alt="Dashboard_View" src="https://github.com/user-attachments/assets/626a9d3c-354b-4608-8f5e-17ab680a07cb" />
 
-
-
----
-
-## 🎯 Ringkasan
-
-Dashboard ini melacak 3 KPI utama dari transaksi penjualan material alam periode Januari–Juli 2025:
-
-| KPI | Nilai |
-|---|---|
-| Total Pembelian | Rp 2.061.800.000 |
-| Total Penjualan | Rp 2.937.900.000 |
-| Total Laba | Rp 876.100.000 |
-
-Dilengkapi breakdown per **Sales**, per **Material**, dan **tren bulanan**, plus slicer untuk filter interaktif.
 
 ---
 
-## 🧹 Proses Data Cleaning (bagian penting dari proyek ini)
+## 📊 Isi Dashboard
 
-Sebelum insight diambil, dilakukan verifikasi terhadap data mentah dan ditemukan dua masalah:
+- **KPI card:** Total Pembelian, Total Penjualan, dan Total Laba
+- **Volume per material:** Batu Kali, Kerikil, Pasir
+- **Laba per sales:** anto, Rudi, Tono
+- **Laba per material:** perbandingan pembelian, penjualan, dan laba
+- **Tren laba per bulan:** periode Januari–Juli 2025
+- **Filter interaktif:** slicer (Sumber Material, Material, Sales) dan timeline tanggal
 
-**1. Outlier / kesalahan input data**
-Satu baris transaksi (31 Juli, Batu Kali) tercatat dengan Volume **5.000** unit — jauh di atas rata-rata transaksi lain (40-90 unit). Baris ini sendirian menyumbang ~32% dari total laba yang tercatat, dan setelah diverifikasi dianggap sebagai kesalahan input, sehingga dikeluarkan dari perhitungan.
+## 🗂️ Dataset
 
-**2. Pivot table belum di-refresh (data stale)**
-Sebagai akibatnya, angka pada dashboard versi awal tidak sinkron dengan data transaksi yang ada — pivot table menampilkan angka dari kondisi data yang sudah usang. Setelah dikoreksi ulang berdasarkan data transaksi aktual (minus outlier), seluruh KPI, tabel, dan chart disesuaikan agar konsisten.
+Data transaksi penjualan material alam periode Januari–Juli 2025 dengan kolom: Tanggal, Sales, Sumber Material, Material, Volume, Harga Satuan Pembelian, Total Pembelian, Harga Satuan Penjualan, Total Penjualan, dan Laba. Sumber material: Gunung Merapi, Magelang, dan Temanggung.
 
-**3. Bug pada pie chart "Total Laba per Sales"**
-Chart ini awalnya ikut memasukkan baris "Grand Total" pivot sebagai salah satu slice — yang secara matematis akan selalu bernilai 50%, terlepas dari distribusi data yang sebenarnya. Sudah diperbaiki agar hanya menampilkan proporsi per sales (anto, Rudi, Tono).
+## 🛠️ Yang Dipraktikkan
 
----
-
-## 🔍 Insight Setelah Data Dikoreksi
-
-- **anto** adalah kontributor laba terbesar (Rp 636.850.000 — 73%), jauh di atas Rudi (19%) dan Tono (9%).
-- **Batu Kali** adalah material dengan laba tertinggi (Rp 272.550.000), diikuti Pasir dan Kerikil yang relatif berimbang.
-- Laba bulanan berkisar Rp 103–149 juta per bulan, dengan Juni sebagai bulan terbaik (Rp 148.750.000).
-
----
-
-## 🛠️ Tools & Teknik
-
-- **Excel PivotTable & PivotChart** — agregasi dan visualisasi per Sales, Material, dan Bulan
-- **Slicer** — filter interaktif
-- **Data validation** — deteksi outlier dengan membandingkan volume transaksi terhadap rata-rata
-
----
+- Membuat PivotTable dari tabel sumber dan menautkannya ke PivotChart
+- Menampilkan KPI card dengan `GETPIVOTDATA`
+- Menghubungkan slicer dan timeline ke beberapa pivot sekaligus
+- Menguji alur pembaruan data: menambahkan record uji di tabel sumber, memastikan KPI card dan chart ter-update setelah **Refresh All**, lalu menghapus record uji tersebut
 
 ## 📁 Isi Repository
 
 ```
-├── Dashboard_Sales_Material_Alam.xlsx   # file utama, buka sheet "Dashboard"
-└── assets/
-    └── dashboard_preview.png
+└── Dashboard_Sales_Material_Alam.xlsx   # buka sheet "Dashboard"
 ```
 
-📊 **[Buka dashboard interaktif (Excel)]** [Porto_DashBoard_Excel_Fixed.xlsx](https://github.com/user-attachments/files/32632353/Porto_DashBoard_Excel_Fixed.xlsx)
-
-
----
-
-## 📌 Catatan
-
-Dataset merupakan data latihan dari program pelatihan data analytics. Proses cleaning, koreksi bug pivot/chart, dan penyusunan dashboard dikerjakan sendiri sebagai latihan penerapan analisis data end-to-end di Excel — termasuk proses verifikasi data yang tidak selalu terlihat di permukaan (stale pivot cache, outlier tersembunyi, bug chart).
+📊 **[Buka dashboard (Excel)](Dashboard_Sales_Material_Alam.xlsx)** — coba klik slicer untuk melihat angka dan chart berubah.
 
 ---
 
